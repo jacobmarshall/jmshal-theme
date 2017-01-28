@@ -1,0 +1,27 @@
+{{!< default}}
+
+{{#post}}
+{{#if image}}
+<header class="post-cover" style="background-image: url({{image}})">
+    <div class="post-cover-inner">
+        <a href="{{@blog.url}}">Home</a>
+    </div>
+</header>
+{{else}}
+{{> header}}
+{{/if}}
+<section class="main" role="main">
+    <article class="article" role="article">
+        <header class="post-header">
+            <h1>
+                <a href="{{{url}}}" rel="bookmark">
+                    {{title}}
+                </a>
+            </h1>
+        </header>
+        {{content}}
+    </article>
+</section>
+{{/post}}
+
+{{> footer}}

@@ -1,8 +1,16 @@
 {{!< default}}
-{{> header}}
 
+{{#post}}
+{{#if image}}
+<header class="post-cover" style="background-image: url({{image}})">
+    <div class="post-cover-inner">
+        <a href="{{@blog.url}}">Home</a>
+    </div>
+</header>
+{{else}}
+{{> header}}
+{{/if}}
 <section class="main" role="main">
-    {{#post}}
     <article class="article" role="article">
         <header class="post-header">
             <time datetime="{{date format="YYYY-MM-DD"}}" title="{{date format="MMMM DD, YYYY"}}">
@@ -68,10 +76,10 @@
         </footer>
         {{/if}}
     </article>
-    {{/post}}
     {{#if pagination}}
         {{{pagination}}}
     {{/if}}
 </section>
+{{/post}}
 
 {{> footer}}
