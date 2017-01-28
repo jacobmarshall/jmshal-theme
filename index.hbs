@@ -1,0 +1,32 @@
+{{!< default}}
+{{> header}}
+
+<section class="main" role="main">
+    {{#foreach posts}}
+    <article class="article" role="article">
+        <header class="post-header">
+            <time datetime="{{date format="YYYY-MM-DD"}}" title="{{date format="MMMM DD, YYYY"}}">
+                {{date timeago="true"}}
+            </time>
+            <h1>
+                <a href="{{{url}}}" rel="bookmark">
+                    {{title}}
+                </a>
+            </h1>
+        </header>
+        <div class="post-content">
+            {{content}}
+        </div>
+        {{#if tags}}
+        <div class="post-tags">
+            Tags: {{tags separator=", "}}
+        </div>
+        {{/if}}
+    </article>
+    {{/foreach}}
+    {{#if pagination}}
+        {{{pagination}}}
+    {{/if}}
+</section>
+
+{{> footer}}
