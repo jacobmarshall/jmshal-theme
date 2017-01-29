@@ -4,7 +4,9 @@
 {{#if image}}
 <header class="post-cover" style="background-image: url({{image}})">
     <div class="post-cover-inner">
-        <a href="{{@blog.url}}">Home</a>
+        <a href="{{@blog.url}}">
+            <span style="display: inline-block; transform: rotate(180deg)">&#10148;</span>
+        </a>
     </div>
 </header>
 {{else}}
