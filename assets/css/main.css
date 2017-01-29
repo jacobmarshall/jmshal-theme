@@ -57,6 +57,14 @@ body {
     font-size: 30px;
 }
 
+h1,
+h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h3,
+h4,
 p {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -137,4 +145,9 @@ a {
 
 .pagination {
     text-align: center;
+}
+
+.main del > a {
+    background-color: #F44336;
+    color: rgba(255, 255, 255, .5);
 }
