@@ -94,6 +94,14 @@ a {
     margin-bottom: 40px;
 }
 
+.article img {
+    display: block;
+    padding: 10px;
+    background-color: #333;
+    max-width: 100%;
+    margin: 60px auto;
+}
+
 .post-cover {
     overflow: hidden;
     min-height: 400px;
