@@ -15,13 +15,9 @@
             </h1>
         </header>
         <div class="post-content">
-            {{content}}
+            {{excerpt words="30"}}...
         </div>
-        {{#if tags}}
-        <div class="post-tags">
-            Tags: {{tags separator=", "}}
-        </div>
-        {{/if}}
+        <a href="{{{url}}}">Read more</a>
     </article>
     {{/foreach}}
     {{#if pagination}}
